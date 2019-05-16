@@ -27,9 +27,6 @@ class App extends React.Component{
     render(){
         return(
             <div>Hello World{this.state.times}
-             {/* <img src={require(`${process.BASEURL}/img/76.png`)}/>
-             <div className="mybox" style={{background:`url(../public/img/78.png)`}}></div> */}
-             <div className='mybox'></div>
              <img src={require(`../../public/img/76.png`)}/>
             </div>
         )
