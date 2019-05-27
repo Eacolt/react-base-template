@@ -1,14 +1,14 @@
 {
-  "name": "{{name}}",
+  "name": "ss",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "sss",
   "main": "./src/main.jsx",
   "scripts": {
     "serve": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
   "keywords": [],
-  "author": "{{author}}",
+  "author": "sss",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -26,6 +26,7 @@
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.6.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "portfinder": "^1.0.20",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
@@ -40,4 +41,5 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
+ 
 }
