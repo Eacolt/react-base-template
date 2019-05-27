@@ -16,7 +16,7 @@ module.exports = portfinder.getPortPromise().then(port=>{
                 use:[{
                     loader:'style-loader'
                    
-                },'css-loader','less-loader']
+                },'css-loader','postcss-loader','less-loader']
                     
                 }
             ]
