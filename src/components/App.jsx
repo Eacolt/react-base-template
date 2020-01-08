@@ -3,7 +3,7 @@ class App extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            times:88
+            times:'ReactBoy!'
         }
     }
     componentDidMount(){
@@ -26,8 +26,8 @@ class App extends React.Component{
 
     render(){
         return(
-            <div>Hello World{this.state.times}
-             <img src={require(`../../public/img/76.png`)}/>
+            <div>Hello World!{this.state.times}
+             <img src={"./img/86.png"}/>
             </div>
         )
     }

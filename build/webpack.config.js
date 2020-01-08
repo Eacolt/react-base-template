@@ -9,7 +9,7 @@ module.exports = {
     entry:path.resolve(__dirname,'../src/main.jsx'),
     output:{
         path:path.resolve(__dirname,'../dist'),
-        filename:'js/[name].bundle.js'
+        filename:'public/js/[name].bundle.js'
     },
     module:{
         rules:[

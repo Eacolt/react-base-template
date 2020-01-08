@@ -3,9 +3,10 @@ module.exports = {
         ['@babel/preset-env',{
            
               "useBuiltIns": "usage",
-              "corejs":"2.6.5"
+              "corejs":"3"
              
         }],
         '@babel/preset-react' 
-    ]
+    ],
+    plugins:["@babel/plugin-syntax-dynamic-import"]
 }

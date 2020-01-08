@@ -1,7 +1,9 @@
 const merge = require('webpack-merge')
 const path = require('path')
+const webpack = require('webpack')
 const webpackConfig = require('./webpack.config')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+ 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin')
@@ -54,21 +56,26 @@ module.exports = merge(webpackConfig,{
     },
  
     plugins:[
+        new CleanWebpackPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.baseURL':JSON.stringify('../public')
+        }),
         new OptimizeCssPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].bundle.css',
-            chunkFilename: 'css/[name].chunks.css'
+            filename: 'public/css/[name].bundle.css',
+            chunkFilename: 'public/css/[name].chunks.css'
           }),
         new CopyWebpackPlugin([{
-            from: path.resolve(__dirname, '../public'),
-            to: path.resolve(__dirname, '../dist')
-        }]),
-        new ImageminPlugin({
-            pngquant:{
-                quality:'95-100'
-            }
-        }),
-        new CleanWebpackPlugin()
+            from: path.resolve(__dirname, '../public/**'),
+            to: path.resolve(__dirname, '../dist'),
+            ignore:['*.html']
+        }])
+        // new ImageminPlugin({
+        //     pngquant:{
+        //         quality:'95-100'
+        //     }
+        // }),
+
       
  
     ]
